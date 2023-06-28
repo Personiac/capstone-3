@@ -46,6 +46,7 @@
       
 
       const postForm = document.querySelector("#postForm");
+      
       postForm.addEventListener("submit", function (event) {
         event.preventDefault();
         createPost();
@@ -56,8 +57,6 @@
 
         const postData = {
           text: postMessage,
-          username: username,
-          createdAt: time,
         };
 
         const options = {
