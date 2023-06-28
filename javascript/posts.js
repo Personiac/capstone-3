@@ -1,83 +1,96 @@
 "use strict";
-      const postsList = document.querySelector("#postsList");
-      const loginData = getLoginData();
+const postsList = document.querySelector("#postsList");
+const moreButton = document.querySelector("#more-button");
+const loginData = getLoginData();
+let page = 1;
+let limit = 100;
 
-      function fetchPosts() {
-        const options = {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${loginData.token}`,
-          },
-        };
+function fetchPosts(page, limit) {
+  const options = {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${loginData.token}`,
+    },
+  };
 
-        fetch(apiBaseURL + "/api/posts", options)
-          .then((response) => response.json())
-          .then((list) => {
-            postsList.innerHTML = ""; // Clear existing posts
-            console.log(list);
-            for (const userPost of list) {
-              let postItemContainer = document.createElement("div");
-              postItemContainer.className = "card mb-3";
+  fetch(
+    `${apiBaseURL}/api/posts?limit=${limit}&offset=${(page - 1) * limit}`,
+    options
+  )
+    .then((response) => response.json())
+    .then((list) => {
+      postsList.innerHTML = ""; // Clear existing posts
+      console.log(list);
+      for (const userPost of list) {
+        let postItemContainer = document.createElement("div");
+        postItemContainer.className = "card mb-3";
 
-              let postItemBody = document.createElement("div");
-              postItemBody.className = "card-body";
+        let postItemBody = document.createElement("div");
+        postItemBody.className = "card-body";
 
-              let postItem = document.createElement("h5");
-              postItem.className = "card-title";
-              postItem.innerText = userPost.username;
+        let postItem = document.createElement("h5");
+        postItem.className = "card-title";
+        postItem.innerText = userPost.username;
 
-              let postText = document.createElement("p");
-              postText.className = "card-text";
-              postText.innerText = userPost.text;
+        let postText = document.createElement("p");
+        postText.className = "card-text";
+        postText.innerText = userPost.text;
 
-              let timePosted = document.createElement("p");
-              timePosted.className = "card-text";
-              timePosted.innerText = userPost.createdAt;
+        let timePosted = document.createElement("p");
+        timePosted.className = "card-text";
+        timePosted.innerText = new Date(
+          userPost.createdAt
+        ).toLocaleDateString();
 
-              postItemBody.append(postItem, postText, timePosted);
-              postItemContainer.appendChild(postItemBody);
-              postsList.appendChild(postItemContainer);
-            }
-          })
-          .catch((error) => {
-            console.log("Error fetching posts:", error);
-          });
+        postItemBody.append(postItem, postText, timePosted);
+        postItemContainer.appendChild(postItemBody);
+        postsList.appendChild(postItemContainer);
       }
-      
+    })
+    .catch((error) => {
+      console.log("Error fetching posts:", error);
+    });
+}
 
-      const postForm = document.querySelector("#postForm");
-      
-      postForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        createPost();
-      });
+const postForm = document.querySelector("#postForm");
 
-      function createPost() {
-        const postMessage = document.querySelector("#postMessage").value;
+postForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  createPost();
+});
 
-        const postData = {
-          text: postMessage,
-        };
+function createPost() {
+  const postMessage = document.querySelector("#postMessage").value;
 
-        const options = {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${loginData.token}`,
-          },
-          body: JSON.stringify(postData),
-        };
+  const postData = {
+    text: postMessage,
+  };
 
-        fetch(apiBaseURL + "/api/posts", options)
-          .then((response) => response.json())
-          .then((newPost) => {
-            document.querySelector("#postMessage").value = "";
-          })
-          .catch((error) => {
-            console.log("Error creating new post:", error);
-          });
-      }
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${loginData.token}`,
+    },
+    body: JSON.stringify(postData),
+  };
 
-      window.addEventListener("DOMContentLoaded", (e) => {
-        fetchPosts();
-      })
+  fetch(apiBaseURL + "/api/posts", options)
+    .then((response) => response.json())
+    .then((newPost) => {
+      document.querySelector("#postMessage").value = "";
+      fetchPosts(page, limit);
+    })
+    .catch((error) => {
+      console.log("Error creating new post:", error);
+    });
+}
+
+window.addEventListener("DOMContentLoaded", (e) => {
+  moreButton.addEventListener("click", () => {
+    page = page + 1;
+    fetchPosts(page, limit);
+  });
+
+  fetchPosts(page, limit);
+});
