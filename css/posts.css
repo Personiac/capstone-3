@@ -30,6 +30,18 @@ body {
     background-color: #c59cd8;
 }
 
+#logoutBtn {
+    background-color: transparent;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#logoutBtn:hover {
+    background-color: #c59cd8;
+}
+
 .container {
     background-color: #fff;
     border-radius: 10px;
