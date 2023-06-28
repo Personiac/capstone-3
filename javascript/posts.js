@@ -14,6 +14,7 @@
           .then((response) => response.json())
           .then((list) => {
             postsList.innerHTML = ""; // Clear existing posts
+            console.log(list);
             for (const userPost of list) {
               let postItemContainer = document.createElement("div");
               postItemContainer.className = "card mb-3";
@@ -55,6 +56,8 @@
 
         const postData = {
           text: postMessage,
+          username: username,
+          createdAt: time,
         };
 
         const options = {
@@ -76,6 +79,6 @@
           });
       }
 
-      document.addEventListener("DOMContentLoaded", (e) => {
+      window.addEventListener("DOMContentLoaded", (e) => {
         fetchPosts();
       })
