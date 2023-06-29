@@ -1,54 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
 
-body {
-    font-family: 'Nunito', sans-serif;
-    background: rgb(244, 203, 248);
-}
 
-.navbar {
-    background-color: #b25dda;
-}
 
-.navbar a {
-    color: #000;
-    text-transform: uppercase;
-}
-
-.navbar .navbar-brand {
-    color: #000;
-    text-transform: uppercase;
-}
-
-.btn {
-    background-color: #b25dda;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.btn:hover {
-    background-color: #c59cd8;
-}
-
-#logoutBtn {
-    background-color: transparent;
-    border: none;
-    color: #000;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-#logoutBtn:hover {
-    background-color: #c59cd8;
-}
-
-.container {
+/* .container {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0,0,0,0.048), 0 12.8px 10.5px rgba(0,0,0,0.58);
     width: 550px;
     max-width: 100%;
-}
+} */
 
 #postItemContainer {
     border: 2px solid #f0f0f0;
