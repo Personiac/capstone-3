@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
+
+h1{text-align: center;}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: rgb(244, 203, 248);
+}
+
+#nav {
+  background-color: #b25dda;
+  color: #fff;
+}
+
+.navbar {
+  color: rgb(32, 129, 8);
+}
+
+#loginCard {
+  background-color: #b25dda;
+  max-width: 50%;
+  max-height: 100%;
+  border-radius: 5px;
+  outline: none;
+  display: block;
+  font-size: 16px;
+  
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #fdfdfd;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border: 5px solid;
+  margin: auto;
+  padding: 10px;
+}
+
+#usernameField {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#passwordField {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 25px;
+}
+
+#loginButton {
+  background: #480766;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  display: block;
+  font-size: 16px;
+  padding: 15px 0;
+  margin-top: 25px;
+  width: 50%;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  padding: 10px;
+}
+#loginButton:hover {
+    background-color: #c59cd8;
+}
