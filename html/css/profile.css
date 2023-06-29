@@ -9,8 +9,8 @@
 }
 
 body {
-    background: #654ea3;
-    background: linear-gradient(to right, #e96443, #904e95);
+    background: rgb(244, 203, 248);
+    background: linear-gradient(to right, #eac0e5,#b25dda );
     min-height: 100vh;
     overflow-x:hidden;
 }
