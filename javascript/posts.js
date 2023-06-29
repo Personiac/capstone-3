@@ -3,7 +3,7 @@ const postsList = document.querySelector("#postsList");
 const moreButton = document.querySelector("#more-button");
 const loginData = getLoginData();
 let page = 1;
-let limit = 100;
+let limit = 5;
 
 function fetchPosts(page, limit) {
   const options = {
@@ -19,7 +19,7 @@ function fetchPosts(page, limit) {
   )
     .then((response) => response.json())
     .then((list) => {
-      postsList.innerHTML = ""; // Clear existing posts
+      // postsList.innerHTML = ""; // Clear existing posts
       console.log(list);
       for (const userPost of list) {
         let postItemContainer = document.createElement("div");
@@ -37,10 +37,10 @@ function fetchPosts(page, limit) {
         postText.innerText = userPost.text;
 
         let timePosted = document.createElement("p");
-        timePosted.className = "card-text";
+        timePosted.className = "card-text small";
         timePosted.innerText = new Date(
           userPost.createdAt
-        ).toLocaleDateString();
+        ).toLocaleString();
 
         postItemBody.append(postItem, postText, timePosted);
         postItemContainer.appendChild(postItemBody);
@@ -79,6 +79,9 @@ function createPost() {
     .then((response) => response.json())
     .then((newPost) => {
       document.querySelector("#postMessage").value = "";
+      page = 1;
+      limit = 5;
+      postsList.innerHTML = ""; // Clear existing posts
       fetchPosts(page, limit);
     })
     .catch((error) => {
