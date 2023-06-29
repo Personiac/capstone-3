@@ -33,7 +33,7 @@
     </script>
   </head>
   <body>
-    <nav id="nav" class="navbar navbar-expand-lg navbar-light ">
+    <nav id="nav" class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Brand</a>
         <button
@@ -64,23 +64,22 @@
     </header>
 
     <main>
-      
       <div id="loginForm">
         <form id="login">
           <div id="loginCard">
-          <div id="usernameField">
-            <label for="username">Username:</label>
-            <input type="text" id="username" minlength="3" />
-          </div>
+            <form class="plzwork">
+              <div id="usernameField">
+                <label for="username" class="txtUserName">Username:</label>
+                <input type="text" id="username" minlength="3" />
+              </div>
 
-          <div id="passwordField">
-            <label for="password">Password:</label>
-            <input type="password" id="password" minlength="6" />
+              <div id="passwordField">
+                <label for="password">Password:</label>
+                <input type="password" id="password" minlength="6" />
+              </div>
+              <button id="loginButton" type="submit">Login</button>
+            </form>
           </div>
-          <button id="loginButton" type="submit">Login</button>
-        </div>
-
-         
         </form>
       </div>
     </main>
