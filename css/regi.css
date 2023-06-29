@@ -15,9 +15,6 @@ body {
   min-height: 100vh;
 }
 
-.container {
-}
-
 .card-container {
   margin-top: 2em;
   display: flex;
