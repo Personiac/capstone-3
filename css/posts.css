@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
 
+body {
+    font-family: 'Nunito', sans-serif;
+    background: rgb(244, 203, 248);
+}
+
 
 #postItemContainer {
     border: 2px solid #f0f0f0;
@@ -21,4 +26,9 @@
 #timePosted {
     font-size: 12px;
     color: #777;
+}
+
+textarea{
+    width: 70em;
+    height: 10em;
 }

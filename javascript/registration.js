@@ -7,14 +7,13 @@ const cpassword = document.getElementById("cpassword");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-
   Validate();
 });
 
 const sendData = (usernameVal, sRate, Count) => {
   console.log(sRate, Count);
   if (sRate === Count) {
-    console.log("https://microbloglite.herokuapp.com/api/users");
+    console.log(apiBaseURL + "/api/users");
     const options = {
       method: "POST",
       headers: {
@@ -26,7 +25,7 @@ const sendData = (usernameVal, sRate, Count) => {
         password: password.value,
       }),
     };
-    fetch("https://microbloglite.herokuapp.com/api/users", options)
+    fetch(apiBaseURL + "/api/users", options)
       .then((response) => response.json())
       .then(function (user) {
         swal("Hello " + usernameVal, "You are Registered", "success");
