@@ -6,7 +6,11 @@
     <title>Profile Page</title>
     <link rel="stylesheet" href="html/css/profile.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  </head>
+    <script src="./javascript/auth.js"></script>
+    <script>
+      if (isLoggedIn() === false) window.location.replace("/");
+    </script>
+</head>
   <body>
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
