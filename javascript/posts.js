@@ -19,8 +19,6 @@ function fetchPosts(page, limit) {
   )
     .then((response) => response.json())
     .then((list) => {
-      postsList.innerHTML = ""; // Clear existing posts
-      console.log(list);
       for (const userPost of list) {
         let postItemContainer = document.createElement("div");
         postItemContainer.className = "card mb-3";
