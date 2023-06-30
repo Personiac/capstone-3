@@ -8,6 +8,10 @@ Our landing page uses a minimalist design when welcoming the user to the login p
 
 
 
+--------------------------------
+
+
+
 The page uses a button to use an alert to provide a brief paragraph for the user to learn more about the website.
 
 ![image](https://github.com/Personiac/capstone-3/assets/100500645/2c882240-18f4-4094-9f92-3bd705a2f053)
