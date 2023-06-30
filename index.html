@@ -19,10 +19,10 @@
     ></script>
 
     <!-- Global CSS (CSS rules you want applied to all pages) -->
-    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./css/global.css" />
 
     <!-- Page-specific CSS -->
-    <link rel="stylesheet" href="css/landing.css" />
+    <link rel="stylesheet" href="./css/landing.css" />
 
     <title>Login to the Microblog Network!</title>
 
@@ -33,7 +33,7 @@
     </script>
   </head>
   <body>
-    <nav id="nav" class="navbar navbar-expand-lg navbar-light">
+    <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Brand</a>
         <button
@@ -50,7 +50,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link active" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="registration.html">Register</a>
@@ -60,13 +60,13 @@
       </div>
     </nav>
     <header>
-      <h1>Welcome to <code>YOUR MICROBLOG NETWORK</code></h1>
+      <h1>Welcome to <code>CODE BLASTER'S MICROBLOG NETWORK</code></h1>
     </header>
 
     <main>
       <div id="loginForm">
         <form id="login">
-          <div id="loginCard">
+          <div id="loginCard" class="container pt-5 pb-5 col-6">
             <form class="plzwork">
               <div id="usernameField">
                 <label for="username" class="txtUserName">Username:</label>
@@ -82,9 +82,20 @@
           </div>
         </form>
       </div>
+      <button id="summaryBtn" onclick="alertPage()">
+        What is Code Blasters?
+      </button>
     </main>
 
     <footer></footer>
     <script src="./javascript/landing.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      function alertPage() {
+        alert(
+          "The Code Blaster's Microblog Network allows users to create a profile in which they can post their comments on a public message board, where they can also read other member's messages. "
+        );
+      }
+    </script>
   </body>
 </html>
