@@ -27,10 +27,12 @@ Our registration page uses a form and emulates similar common layouts seen for o
 
 ![image](https://github.com/Personiac/capstone-3/assets/100500645/3ad10147-b27d-4702-8ce1-bb6e87b7f3d0)
 
+![image](https://github.com/Personiac/capstone-3/assets/100500645/fe74e5bf-793f-413e-9176-5263de96fda5)
 
 
 
 --------------------------------
+
 
 
 
