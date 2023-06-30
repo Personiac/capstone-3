@@ -4,4 +4,5 @@ The intent behind our capstone project is to create a microblogging website thro
 
 Our landing page uses a minimalist design when welcoming the user to the login page. The page uses a button to use an alert to provide a brief paragraph for the user to learn more about the website. 
 
-![image](https://github.com/Personiac/capstone-3/assets/100500645/ec88dcd3-9f6f-4136-8264-bf0d9ce42caf)
+![image](https://github.com/Personiac/capstone-3/assets/100500645/66695c6e-978a-4736-8cf4-bb3834795795)
+
