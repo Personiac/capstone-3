@@ -36,6 +36,9 @@ Our registration page uses a form and emulates similar common layouts seen for o
 
 
 
+The post page allows theuser to create their own message and submit it to the API database. From there, we fetch the API and convert the json response into a JavaScript object that we can use. The JavaScript object is then displaying the array from the object as a list of user posts in a layout similar to other social media platforms.
+
+![image](https://github.com/Personiac/capstone-3/assets/100500645/b22ab5ee-9c6a-4f24-9279-c6a4ef78a2df)
 
 
 
