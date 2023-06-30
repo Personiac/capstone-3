@@ -54,4 +54,12 @@ The profile page is a simple template to act as a proof of concept to showcase a
 
 
 
+--------------------------------
+
+
+
+
+The logout button is located in the navbar across the registration page, post page, and profile page. The feature functions appropriately to allow the user to exit their account session.
+
+
 
