@@ -6,3 +6,6 @@ Our landing page uses a minimalist design when welcoming the user to the login p
 
 ![image](https://github.com/Personiac/capstone-3/assets/100500645/66695c6e-978a-4736-8cf4-bb3834795795)
 
+
+![image](https://github.com/Personiac/capstone-3/assets/100500645/fa866ed1-6397-463e-b0db-ea1ef8d2b186)
+
